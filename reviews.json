@@ -1,0 +1,125 @@
+{
+    "reviews": [
+      {
+        "professor": "Dr. John Smith",
+        "subject": "Computer Science",
+        "stars": 5,
+        "review": "Dr. Smith is incredibly knowledgeable and always willing to help. His lectures are clear and concise."
+      },
+      {
+        "professor": "Dr. Emily Brown",
+        "subject": "Mathematics",
+        "stars": 4,
+        "review": "Dr. Brown explains concepts well, but sometimes the pace is too fast. Overall, a great professor."
+      },
+      {
+        "professor": "Dr. Michael Johnson",
+        "subject": "Physics",
+        "stars": 3,
+        "review": "The content is difficult, and Dr. Johnson's explanations can be hard to follow at times."
+      },
+      {
+        "professor": "Dr. Sarah Miller",
+        "subject": "Chemistry",
+        "stars": 4,
+        "review": "Very organized and makes the material interesting. Labs are well-structured."
+      },
+      {
+        "professor": "Dr. James Wilson",
+        "subject": "Biology",
+        "stars": 5,
+        "review": "Dr. Wilson is passionate about biology and makes the subject exciting. Highly recommend his classes."
+      },
+      {
+        "professor": "Dr. Olivia Davis",
+        "subject": "History",
+        "stars": 2,
+        "review": "Lectures are dry and lack engagement. She knows her stuff but isn't the best at conveying it."
+      },
+      {
+        "professor": "Dr. William Garcia",
+        "subject": "Philosophy",
+        "stars": 4,
+        "review": "A deep thinker who challenges students to question their assumptions. Can be a bit abstract."
+      },
+      {
+        "professor": "Dr. Ava Martinez",
+        "subject": "Economics",
+        "stars": 5,
+        "review": "Dr. Martinez is excellent at breaking down complex economic theories into understandable concepts."
+      },
+      {
+        "professor": "Dr. David Anderson",
+        "subject": "Political Science",
+        "stars": 3,
+        "review": "Knowledgeable but sometimes too biased in his views. Encourages debate, which is good."
+      },
+      {
+        "professor": "Dr. Sophia Thomas",
+        "subject": "Sociology",
+        "stars": 4,
+        "review": "Engaging lectures with real-world examples. Dr. Thomas makes the subject matter relatable."
+      },
+      {
+        "professor": "Dr. Daniel Jackson",
+        "subject": "Psychology",
+        "stars": 5,
+        "review": "An amazing professor who really cares about his students' understanding and mental well-being."
+      },
+      {
+        "professor": "Dr. Mia Lee",
+        "subject": "English Literature",
+        "stars": 2,
+        "review": "Heavy reading load and hard to keep up with assignments. Lectures can be a bit monotonous."
+      },
+      {
+        "professor": "Dr. Matthew White",
+        "subject": "Art History",
+        "stars": 4,
+        "review": "Dr. White brings art to life with his passion and detailed knowledge. Great at engaging students."
+      },
+      {
+        "professor": "Dr. Charlotte Harris",
+        "subject": "Environmental Science",
+        "stars": 5,
+        "review": "Her enthusiasm for the environment is contagious. Very hands-on with fieldwork opportunities."
+      },
+      {
+        "professor": "Dr. Joseph Lewis",
+        "subject": "Engineering",
+        "stars": 3,
+        "review": "The content is very technical, and Dr. Lewis can be hard to understand sometimes."
+      },
+      {
+        "professor": "Dr. Amelia Walker",
+        "subject": "Anthropology",
+        "stars": 4,
+        "review": "Dr. Walker is very approachable and makes anthropology fascinating with her stories and examples."
+      },
+      {
+        "professor": "Dr. Ethan Young",
+        "subject": "Statistics",
+        "stars": 2,
+        "review": "The material is tough, and Dr. Young's teaching style doesn't make it any easier."
+      },
+      {
+        "professor": "Dr. Isabella King",
+        "subject": "Music Theory",
+        "stars": 5,
+        "review": "A brilliant musician who inspires her students. Classes are challenging but rewarding."
+      },
+      {
+        "professor": "Dr. Alexander Scott",
+        "subject": "Astronomy",
+        "stars": 4,
+        "review": "Dr. Scott's passion for the stars is evident. Lectures are interesting, though sometimes a bit dense."
+      },
+      {
+        "professor": "Dr. Grace Green",
+        "subject": "Linguistics",
+        "stars": 3,
+        "review": "Linguistics is a tough subject, and Dr. Green's explanations are sometimes unclear. But she's helpful during office hours."
+      }
+    ]
+  }
+  
