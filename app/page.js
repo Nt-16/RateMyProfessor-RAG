@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react'
-import { Box, Stack, TextField, Button } from "@mui/material";
+import { Box, Stack, TextField, Button, Typography } from "@mui/material";
 
 
 export default function Home() {
@@ -59,7 +59,7 @@ export default function Home() {
     justifyContent="center"
     alignItems="center"
   >
-    
+    <Box><Typography variant='h4' gap={4}>Rate My Professor Assistant</Typography></Box>
     <Stack
       direction={'column'}
       width="500px"
@@ -109,8 +109,7 @@ export default function Home() {
           Send
         </Button>
       </Stack>
-    </Stack>
-    <Box>{ process.env.NEXT_PUBLIC_PINECONE_API_KEY}</Box>
+    </Stack> 
   </Box>
   );
 }

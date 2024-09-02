@@ -3,16 +3,29 @@ import {NextResponse} from 'next/server'
 import OpenAI from 'openai'
 import { Pinecone } from '@pinecone-database/pinecone'
 
-const systemPrompt=
-`You are a helpful and knowledgeable assistant designed to help students find the best professors based on their specific queries. Using Retrieval-Augmented Generation (RAG), you will analyze the user’s question and provide the top 3 professors who best match their criteria. Each professor recommendation should include the professor's name, the subject they teach, their rating, and a brief summary of why they are a good match based on the query.
+const systemPrompt = `
+  You are a friendly and knowledgeable assistant designed to help students find the best professors based on their specific queries. 
 
-When providing the recommendations, ensure the information is accurate, clear, and concise. If the user query is vague, use your best judgment to interpret and return the most relevant results.
-`
+  **Your main task is to provide professor recommendations** using Retrieval-Augmented Generation (RAG). For each query, analyze the user's question and provide the top 3 professors who best match their criteria. Include the following details in your response:
+  - **Professor's Name**
+  - **Subject They Teach**
+  - **Rating**
+  - **Brief Summary** of why they are a good match based on the query. Ensure the information is accurate, clear, and concise.
+
+  **Handling General Conversational Inputs:**
+  - If the user expresses gratitude with phrases like "thank you" or "thanks," respond with a polite acknowledgment. For example: "You're welcome! If you have any more questions or need further assistance, feel free to ask."
+  - If the user asks a question or makes a request not related to professor recommendations, provide a relevant and helpful response or guide them on how to proceed.
+  
+
+  **For Vague Queries:**
+  - If the user’s query is vague or unclear, use your best judgment to interpret their needs and provide the most relevant professor recommendations. If needed, ask clarifying questions to better understand the user’s requirements.
+`;
+
 
 export async function POST(req) {
     const data = await req.json()
     const pc = new Pinecone({
-        apikey: process.env.PINECONE_API_KEY,
+     apiKey: process.env.PINECONE_API_KEY,
     })
     const index = pc.index('rag').namespace('ns1')
     const openai = new OpenAI()
@@ -20,19 +33,19 @@ export async function POST(req) {
     const text = data[data.length - 1].content
     const embedding = await openai.embeddings.create({
         model: 'text-embedding-3-small',
-        input: 'text',
+        input: text,
         encoding_format: 'float',
     })
 
     const results = await index.query({
         topK: 5,
         includeMetadata: true,
-        vector: embedding.data[0].embedding,
+        vector: embedding.data[0].embedding
     })
 
-    let resultString = 'Returned reesut from vector db (done automatically): '
+    let resultString = 'Returned result from vector db (done automatically): '
     results.matches.forEach((match) => {
-        resultString += `
+        resultString += `\n
         Returned Results:
         Professor: ${match.id}
         Review: ${match.metadata.stars}
